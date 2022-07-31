@@ -1,0 +1,22 @@
+#logoAP{
+    width: 25vh;
+    top: 0;
+    left: 4vh;
+    position: absolute;
+}
+
+@media(max-width: 550px){
+    #logoAP{
+        width: 15vh;
+    }
+    }
+
+@media(max-width: 384px){
+    #logoAP{
+        width: 10vh;
+        top: 0vh;
+        left: 2vh;
+        position: absolute;
+        display: none;
+    }
+}

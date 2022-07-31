@@ -1,0 +1,38 @@
+<div class="container">
+<p class="subtitle">MY EXPERIENCE:</p>
+<h1> <br> </h1>   
+<div class="row">
+
+    <div class="col-lg-2" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            New experience
+        </button>
+        <h1> <br> </h1>   
+    </div>
+
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of expe">
+                    <h1> <br> </h1>   
+                    <td>
+                        <h4 style="color: #FA4BC5;">{{Experiencia.nombreE}}</h4>
+                    </td>
+                    <td style="color: #FFFFFF;">{{Experiencia.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-dark" routerLink="/editexp/{{Experiencia.id}}">
+                            <i class="bi bi-pencil"></i> </button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
+                            <i class="bi bi-trash"></i> </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+ </div>
+ </div>

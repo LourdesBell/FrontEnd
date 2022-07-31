@@ -1,0 +1,27 @@
+<div class="about-me-all">
+    
+    <div id="about-me-div-1">
+
+        
+        <div> 
+            <img src= "../../../assets/Icon.png" class= "img-me"> 
+            
+            <button *ngIf="isLogged"><i class="bi bi-pencil"></i> EDIT</button>
+        </div>
+        
+        <div id="about-me-title"> 
+            <p class="text-color">  {{persona.nombre}}  {{persona.apellido}}</p>
+            <p id="my-rol"> Graphic Designer & Full Stack Developer</p>
+            <button class="btn btn-dark" routerLink="/editsobremi/{{persona.id}}">
+                <i class="bi bi-pencil"></i> EDIT</button>
+        </div>
+
+    </div>
+
+    <div id="about-me-div-2"> 
+        <p class="text-color">ABOUT ME:</p>
+        <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas ullam, dicta enim vero ipsum itaque vitae facere facilis ad accusantium quia accusamus nam distinctio. Eos amet quisquam in sit consectetur! </h4>
+    
+    </div>
+
+</div>

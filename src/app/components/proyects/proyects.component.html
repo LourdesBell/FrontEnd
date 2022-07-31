@@ -1,0 +1,45 @@
+<div class="container">
+
+    <p class="subtitle">MY PROYECTS:</p>
+    <h1> <br> </h1>   
+    <div class="row">
+    
+        <div class="col-lg-2" *ngIf="isLogged">
+            <button type="button" class="btn btn-dark" routerLink="/nuevapro" *ngIf="isLogged">
+                New proyect
+            </button>
+            <h1> <br> </h1>   
+        </div>
+    
+        <div class="col lg 1"></div>
+        <div class="col-lg-11">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Proyectos of pro">
+                        <h1> <br> </h1>   
+                        
+                        <td>
+                          <img src={{Proyectos.urlProyectos}} alt="Responsive image"  class="img-thumbnail">
+                        </td>
+                        <td>
+                            <h6 style="color: #FA4BC5;">{{Proyectos.nombreProyectos}}</h6>
+                        </td>
+
+
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-dark" routerLink="/editpro/{{Proyectos.id}}">
+                                <i class="bi bi-pencil"></i> </button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-danger" (click)="delete(Proyectos.id)">
+                                <i class="bi bi-trash"></i> </button>
+                        </td>
+                        <h1> <br> </h1>  
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+     </div>
+    
+    </div>

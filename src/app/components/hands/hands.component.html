@@ -1,0 +1,52 @@
+<div class="container">
+    <p class="subtitle">HARD & SOFT SKILLS:</p>
+
+    <div class="col-lg-2" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="/nuevahabilidades" *ngIf="isLogged">
+            New skill
+        </button>
+    </div>
+   
+        <div class="row">
+                   <div class="col-sm-12 col-md-12 ">
+                    <table>
+                        <tr *ngFor="let Habilidades of hab" class="col-md-4">                        
+                            <td>                                
+                                <circle-progress
+                                [percent]= Habilidades.descripcionHabilidades
+                                [radius]="75"
+                                [outerStrokeWidth]="10"
+                                [innerStrokeWidth]="2"
+                                [outerStrokeColor]="'#FA4BC5'"
+                                [innerStrokeColor]="'#D131A1'"
+                                [animation]="true"
+                                [animationDuration]="300"
+                                [title]="[Habilidades.nombreHabilidades]"
+                                [subtitle]="'In progress'"	
+                                [titleFontSize]="'20'"	
+                                [titleColor]="'#FFFFFF'"
+                                [subtitleFontSize]="'15'"
+                                [subtitleColor]="'#FA4BC5'"
+                                [showUnits]="false"
+                                ></circle-progress>
+                            </td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-dark" routerLink="/edithab/{{Habilidades.id}}">
+                                    <i class="bi bi-pencil"></i> </button>
+                            </td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-danger" (click)="delete(Habilidades.id)">
+                                    <i class="bi bi-trash"></i> </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+    </div>
+ 
+
+
+    
+
+
+

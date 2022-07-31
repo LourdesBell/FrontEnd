@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <h1> <br> </h1>   
+                <div class="form-group">
+                    <label for="nombreProyectos" style="color: #FFFFFF;" >Proyect´s name </label>
+                    <input type="text" class="form-control" id="nombreProyectos" name="nombreProyectos" [(ngModel)]="nombreProyectos" required>
+                </div>
+                <h1> <br> </h1>   
+                <div class="form-group">
+                    <label for="urlProyectos" style="color: #FFFFFF;"  >Image´s url</label>
+                    <input type="text" class="form-control" id="urlProyectos" name="urlProyectos" [(ngModel)]="urlProyectos" required>
+                </div>
+                <h1> <br> </h1>   
+                <button class="btn btn-primary">
+                    ADD PROYECT
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
